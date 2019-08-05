@@ -42,6 +42,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -72,7 +74,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(354, 51);
+            this.pictureBox1.Location = new System.Drawing.Point(354, 77);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(336, 496);
             this.pictureBox1.TabIndex = 3;
@@ -81,7 +83,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(696, 51);
+            this.pictureBox2.Location = new System.Drawing.Point(696, 77);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(336, 496);
             this.pictureBox2.TabIndex = 4;
@@ -91,7 +93,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(12, 51);
+            this.pictureBox3.Location = new System.Drawing.Point(12, 77);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(336, 496);
             this.pictureBox3.TabIndex = 5;
@@ -99,7 +101,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(12, 298);
+            this.pictureBox4.Location = new System.Drawing.Point(12, 324);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(686, 241);
             this.pictureBox4.TabIndex = 6;
@@ -108,7 +110,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(704, 298);
+            this.pictureBox5.Location = new System.Drawing.Point(704, 324);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(686, 241);
             this.pictureBox5.TabIndex = 7;
@@ -117,7 +119,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Location = new System.Drawing.Point(12, 51);
+            this.pictureBox6.Location = new System.Drawing.Point(12, 77);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(686, 241);
             this.pictureBox6.TabIndex = 8;
@@ -137,7 +139,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(418, 28);
+            this.checkBox2.Location = new System.Drawing.Point(418, 31);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(115, 17);
             this.checkBox2.TabIndex = 10;
@@ -149,8 +151,6 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Checked = true;
-            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox3.Location = new System.Drawing.Point(539, 12);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(110, 17);
@@ -169,7 +169,7 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(539, 28);
+            this.checkBox4.Location = new System.Drawing.Point(539, 31);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(71, 17);
             this.checkBox4.TabIndex = 13;
@@ -184,11 +184,36 @@
             this.textBox2.TabIndex = 14;
             this.textBox2.Text = "15";
             // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Checked = true;
+            this.checkBox5.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox5.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.checkBox5.Location = new System.Drawing.Point(539, 51);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(116, 17);
+            this.checkBox5.TabIndex = 15;
+            this.checkBox5.Text = "Randomize timeout";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(418, 51);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(72, 17);
+            this.checkBox6.TabIndex = 16;
+            this.checkBox6.Text = "Save files";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 553);
+            this.ClientSize = new System.Drawing.Size(705, 591);
+            this.Controls.Add(this.checkBox6);
+            this.Controls.Add(this.checkBox5);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.checkBox4);
             this.Controls.Add(this.textBox1);
@@ -233,6 +258,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox checkBox6;
     }
 }
 

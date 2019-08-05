@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace DifferencesOnline
@@ -151,7 +152,10 @@ namespace DifferencesOnline
                 bitmap1 = new Bitmap((int)cp[0], (int)cp[1], PixelFormat.Format32bppArgb);
                 Graphics graphics1 = Graphics.FromImage(bitmap1 as Image);
                 graphics1.CopyFromScreen(screen.WorkingArea.Location.X + (int)cp[2], screen.WorkingArea.Location.Y + (int)cp[4], 0, 0, bitmap1.Size, CopyPixelOperation.SourceCopy);
-                bitmap1.Save("image1.png");
+                if (checkBox6.Checked)
+                {
+                    bitmap1.Save("image1.png");
+                }
             }
             ((PictureBox)cp[6]).Image = bitmap1;
 
@@ -173,7 +177,10 @@ namespace DifferencesOnline
                 bitmap2 = new Bitmap((int)cp[0], (int)cp[1], PixelFormat.Format32bppArgb);
                 Graphics graphics2 = Graphics.FromImage(bitmap2 as Image);
                 graphics2.CopyFromScreen(screen.WorkingArea.Location.X + (int)cp[3], screen.WorkingArea.Location.Y + (int)cp[5], 0, 0, bitmap2.Size, CopyPixelOperation.SourceCopy);
-                bitmap2.Save("image2.png");
+                if (checkBox6.Checked)
+                {
+                    bitmap2.Save("image2.png");
+                }
             }
             ((PictureBox)cp[7]).Image = bitmap2;
 
@@ -193,12 +200,20 @@ namespace DifferencesOnline
 
             if (checkBox4.Checked)
             {
-                differences.ForEach(d =>
+                Random rng = new Random();
+                differences.OrderBy(a => Guid.NewGuid()).ToList().ForEach(d =>
                 {
                     var cxP = (d.Left + d.Right) / 2;
                     var cyP = (d.Top + d.Bottom) / 2;
                     LClick(cxP + (int)cp[2], cyP + (int)cp[4]);
-                    System.Threading.Thread.Sleep(1000);
+                    if (checkBox5.Checked)
+                    {
+                        System.Threading.Thread.Sleep(rng.Next(300, 4000));
+                    }
+                    else
+                    {
+                        System.Threading.Thread.Sleep(rng.Next(300, 500));
+                    }
                 });
             }
         }
